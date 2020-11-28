@@ -1,0 +1,164 @@
+<!-DOCTYPE html>
+<html>
+    <head>
+<title></title>
+    
+    
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+            
+        }
+        .txt1 {
+            text-align: center;
+            margin: 20px auto;
+            position: absolute;
+            font-size: 10xp;
+            left: 0;
+            top: 0;
+            margin: 70px;
+            font-size: 10px;
+        }
+        
+        .txt2{
+           left: 0;
+            position: absolute;
+            margin: 20px 0;
+            top: 0;
+            
+        }
+        .counter{
+            
+            width: 150px;
+            height: 150px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            font-size: 22px;
+            text-align: center;
+            margin: 200px auto;
+            position: relative;
+            line-height: 5;
+        } 
+        .red{
+            
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            float: left;
+            cursor: pointer;
+        }      
+        
+        .green{
+            
+            margin: 10px ;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: green;
+            float: left;
+            cursor: pointer;
+        }     
+        
+        .blue{
+            
+            margin: 10px ;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: blue;
+            float: left;
+            cursor: pointer;
+        }
+        
+    </style>
+    
+
+ 
+    </head>
+
+<body> 
+    
+    
+
+   <h2 class="txt2"> Hany Youssef</h2>    
+    
+  <h1 class="txt1">Welcome To Open University</h1>  
+    
+    <div class="counter"></div>
+  <div style="padding: 0px;background: #FFF;width: 250px;height: 60px;"> 
+    <span class="red"></span>
+    <span class="green"></span>
+    <span class="blue"></span>
+    </div> 
+    
+    
+    
+    
+    <script>
+  
+  document.querySelector('.red').onclick =()=>{
+      document.body.style.background='red';
+  };  
+    document.querySelector('.green').onclick =()=>{
+      document.body.style.background='green';
+  };  
+document.querySelector('.blue').onclick =()=>{
+      document.body.style.background='blue';
+      document.body.style.color='#FFF';
+    
+    
+  };  
+   
+        
+ /*------------------------------------*/       
+var x3 =11; 
+  var Time3 = setInterval(()=>{
+        
+ document.querySelector('.counter').innerHTML= x3; 
+      
+      if( x3 <= 1 ){
+  
+  clearInterval(Time3); 
+      }
+x3--;
+  },200);      
+        
+    /*----------------------------------*/    
+
+  var x1 =0;      
+   var Time1 = setInterval( ()=>{
+       
+var txt1 = document.querySelector('.txt1');
+txt1.style.fontSize= x1++;
+       
+if( x1 > 50){
+    
+   clearInterval(Time1); 
+  
+}       
+},20);
+        
+  /*--------------------------------*/      
+   var mainWidth = document.body.clientWidth-170; 
+  var x2=0;      
+    var Time2 = setInterval(()=>{
+    var txt2 = document.querySelector('.txt2');
+     
+  txt2.style.left=x2++;
+  if( x2 > mainWidth){
+      
+      clearInterval(Time2); 
+  }              
+},5);  
+    
+    
+    </script>
+
+    </body>
+</html>
